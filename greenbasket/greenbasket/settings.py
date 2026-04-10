@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'greenbasket.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'greenbasket',
+        'NAME': 'green_db',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
@@ -119,4 +119,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+#login url
+LOGIN_URL = 'login'
